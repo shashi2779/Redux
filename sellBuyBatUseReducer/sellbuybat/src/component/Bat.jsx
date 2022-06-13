@@ -16,7 +16,7 @@ function reducer(state,action){   // dispatch related to action , dispatch passe
             }
             return{
                 bat:state.bat - state.value,
-                value:''
+                value:''                      // input me jo value type kiye h as a "tosell" usseee-> , input se hataye h 
             }
          break;
          
