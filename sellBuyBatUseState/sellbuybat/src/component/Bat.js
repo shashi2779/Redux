@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 function Bat() {
-   const [bat,setbat] = useState(10)
+   const [bat,setbat] = useState(10) // by default bat ki value 10 h 
    const [toSell,setToChangeBat] = useState("")
 
    let sellBat = () =>{

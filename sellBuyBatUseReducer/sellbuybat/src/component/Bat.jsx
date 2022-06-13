@@ -2,10 +2,10 @@ import React,{useReducer} from 'react'
  
 let initialState = {
     bat:10,
-    value:''   // tosell as a value liye h 
+    value:''   // tosell as a "value" liye h 
 }
 
-function reducer(state,action){
+function reducer(state,action){   // dispatch related to action
     switch(action.type){
         case 'sell_bat':
             if(state.bat - state.value <0){  // handle krr rha ki buy karne prr -ve me na jaye 
