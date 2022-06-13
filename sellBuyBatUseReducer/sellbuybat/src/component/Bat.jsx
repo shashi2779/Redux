@@ -5,7 +5,7 @@ let initialState = {
     value:''   // tosell as a "value" liye h 
 }
 
-function reducer(state,action){   // dispatch related to action
+function reducer(state,action){   // dispatch related to action , dispatch passes obj , in obj -> action form
     switch(action.type){
         case 'sell_bat':
             if(state.bat - state.value <0){  // handle krr rha ki buy karne prr -ve me na jaye 
