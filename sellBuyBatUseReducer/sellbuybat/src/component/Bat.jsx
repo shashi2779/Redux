@@ -10,7 +10,7 @@ function reducer(state,action){   // dispatch related to action , dispatch passe
         case 'sell_bat':
             if(state.bat - state.value <0){  // handle krr rha ki buy karne prr -ve me na jaye 
                 return {
-                    ...state,
+                    ...state,                // state me initialState pass hua h
                     value:''
                 }
             }
