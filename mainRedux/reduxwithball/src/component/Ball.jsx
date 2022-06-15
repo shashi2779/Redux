@@ -7,7 +7,7 @@ function Ball(props) {
         <h1>Balls</h1>
         <h2>No of Balls:{props.balls}</h2>
         <button
-            onClick={props.buyBall}
+            onClick={props.buyBall} 
         >+</button>
         <button
             onClick={props.sellBall}
