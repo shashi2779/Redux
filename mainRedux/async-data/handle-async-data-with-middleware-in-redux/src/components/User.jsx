@@ -20,13 +20,13 @@ function User(props) {
     )
 }
 function mapStatetoProps(store) {
-    return store.User;              // rootUser se User aaya h
+    return store.User;              // rootUser.js se User aaya h , toh "store.Ball" means store se Ball ka data access kiye  
 }
 function mapDispatchtoProps(dispatch) {
     return {
         fetchUser: () => {
             // function
-            return dispatch(userFetchMiddleWare);
+            return dispatch(userFetchMiddleWare);    // dispatch se fun/obj kuchh bhi pass kare MiddleWare k pas jayega wha handle hoga phir wha se MiddleWare ka dispatch reducer k pass bhej dega
         }
     }
 }

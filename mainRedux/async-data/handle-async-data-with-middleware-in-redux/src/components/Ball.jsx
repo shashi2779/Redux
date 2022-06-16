@@ -22,7 +22,7 @@ function Ball(props) {
 // this fun return state...variable as a props in our Ball fun.
 const mapStateToProps = (store) => {   // return state-variable as props
    
-    return store.Ball;       // rootUser se Ball , toh store.Ball means store se Ball ka data access kiye               
+    return store.Ball;       // rootUser.js se Ball aaya h , toh "store.Ball" means store se Ball ka data access kiye               
 
 }
 
