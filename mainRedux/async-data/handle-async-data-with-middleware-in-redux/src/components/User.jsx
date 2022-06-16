@@ -20,7 +20,7 @@ function User(props) {
     )
 }
 function mapStatetoProps(store) {
-    return store.User;
+    return store.User;              // rootUser se User aaya h
 }
 function mapDispatchtoProps(dispatch) {
     return {
