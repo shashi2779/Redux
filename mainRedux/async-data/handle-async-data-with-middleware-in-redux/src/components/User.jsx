@@ -26,7 +26,7 @@ function mapDispatchtoProps(dispatch) {
     return {
         fetchUser: () => {
             // function
-            return dispatch(userFetchMiddleWare);    // dispatch se fun/obj kuchh bhi pass kare MiddleWare k pas jayega wha handle hoga phir wha se MiddleWare ka dispatch reducer k pass bhej dega
+            return dispatch(userFetchMiddleWare);    // ess dispatch se fun/obj kuchh bhi pass kare MiddleWare k pas jayega wha handle hoga phir wha se MiddleWare ka dispatch reducer k pass bhej dega
         }
     }
 }
