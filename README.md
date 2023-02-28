@@ -148,6 +148,26 @@
 
 ## In sellBuyBatUseReducer :
 
+       //reducer function
+       
+        function reducer(state,action){  
+               
+                switch(action.type){
+                      
+                      case 'sell_bat':
+                           break;
+                       
+                      case 'buy_bat':
+                           break;
+                          
+                      case 'set_value':
+                                             
+                           break;                          
+                }
+        }
+-----------------------------------------
+
+
        import React,{useReducer} from 'react'
         
         let initialState = {
