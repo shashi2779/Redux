@@ -45,8 +45,10 @@ function Bat() {
     <h1>Bat</h1>
      <h1>no of bats:{state.bat}</h1> 
      <input type={'number'}  value={state.value} 
-        onChange={(e)=>{let typeValue = e.target.value; 
-            dispatch({ type:'set_value' , payload:typeValue })}}  // payload se data pass krr rhe h , action form ho rha 
+        onChange={(e)=>{
+            let typeValue = e.target.value; 
+            dispatch({ type:'set_value' , payload:typeValue }) // dispatch me value pass kiye with the help of "payload"
+        }}                                                    // payload se data pass krr rhe h , matlab action form ho rha 
         />
      <button onClick={()=>{dispatch({type:'sell_bat'})}}>sell</button>
      <button onClick={()=>{dispatch({type:'buy_bat'})}}>buy</button>

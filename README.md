@@ -78,7 +78,17 @@
 
 - [state, dispatch] :
    
-   - increment , decrement => enn dono k liye useReducer ek common function dega dispatch() nam se.
+   - increment , decrement => enn dono k liye useReducer ek common function dega "dispatch()" nam se.
+   - dispatch me value pass karte hai with the help of "payload"
+        
+          <input type={'number'}  value={state.value} 
+            onChange={(e)=>{
+                let typeValue = e.target.value; 
+                dispatch({ type:'set_value' , payload:typeValue }) // dispatch me value pass kiye with the help of "payload"
+                }}   
+           />
+
+       -----------------            
 
 
              return (
