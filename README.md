@@ -1,3 +1,5 @@
+## first solve with "useState" then "useReducer" then "Reducer"
+------------------
 ### steps :
 ##### 1- counterBallWithUseState
 ##### 2- counterBallWithUseReducer
