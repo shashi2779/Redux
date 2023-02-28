@@ -148,8 +148,8 @@
 
 ## In sellBuyBatUseReducer :
 
-       //reducer function
-       
+       //reducer function Hints
+
         function reducer(state,action){  
                
                 switch(action.type){
@@ -165,6 +165,7 @@
                            break;                          
                 }
         }
+
 -----------------------------------------
 
 
