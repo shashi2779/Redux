@@ -148,6 +148,7 @@
 
 ## In sellBuyBatUseReducer :
 
+```js   
        //reducer function Hints :
 
         function reducer(state,action){  
@@ -166,8 +167,10 @@
                 }
         }
 
------------------------------------------
 
+```
+
+```js
 
        import React,{useReducer} from 'react'
         
@@ -228,3 +231,5 @@
         }
 
         export default Bat
+
+```
