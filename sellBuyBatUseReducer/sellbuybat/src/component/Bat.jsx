@@ -2,7 +2,7 @@ import React,{useReducer} from 'react'
  
 let initialState = {
     bat:10,
-    value:''   // tosell as a "value" liye h 
+    value:''   // tosell ko as a "value" liye h 
 }
 
 function reducer(state,action){   // dispatch related to action , dispatch passes obj , in obj -> action form
