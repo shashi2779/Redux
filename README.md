@@ -148,7 +148,7 @@
 
 ## In sellBuyBatUseReducer :
 
-       //reducer function Hints
+       //reducer function Hints :
 
         function reducer(state,action){  
                
