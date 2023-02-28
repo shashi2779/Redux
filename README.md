@@ -146,7 +146,7 @@
 
 
 
-### In sellBuyBatUseReducer :
+## In sellBuyBatUseReducer :
 
        import React,{useReducer} from 'react'
         
