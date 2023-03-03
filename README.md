@@ -297,19 +297,8 @@
   -  "store"  -> mapsstatetoprops
      
      
-            // to get your state variable from redux store , (dispatch function bhi provide karta h) 
            
-            const mapStateToProps = (store) => {   // return state-variable as props
-                return store;  // this fun return state...variable as a props in our Ball fun.
-                        
-            }
-
-
-
-
-
-
-            function Ball(props) {
+           function Ball(props) {
                 console.log(props)
                 return (<>
                     <h1>Balls</h1>
@@ -319,6 +308,19 @@
                 </>
                 )
             }
+
+
+            
+            
+            // to get your state variable from redux store , (dispatch function bhi provide karta h) 
+           
+            const mapStateToProps = (store) => {   // return state-variable as props
+                return store;  // this fun return state...variable as a props in our Ball fun.
+                        
+            }
+
+
+            export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
       
      
 ![](img/code2.png)
