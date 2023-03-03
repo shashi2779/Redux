@@ -6,7 +6,7 @@ import Ball from './component/Ball';
 //install & import  react-redux for Provider -> npm i react-redux
 import { Provider } from 'react-redux';  
 
-//ess provider ko pata hi nhi hamara "state" kaha hai, kaun se store me hai ,
+//ess provider ko pata hi nhi hamara "state" kaha hai, kaun se "store" me hai ,
 //eske pas koi information nahi hai , toh information k liye hme "store" ko import karna pda.
 //ess "store" ko as a "parameter" pass kar degen "Provider" ko 
 import store from './store';
