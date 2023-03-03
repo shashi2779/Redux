@@ -1,6 +1,9 @@
 import './App.css';
 import Ball from './component/Ball';
-import { Provider } from 'react-redux';   //install react-redux -> npm i react-redux
+
+// ess provider k through hmm apni app ko redux ke sath connect kar sakte hai.
+//install & import  react-redux for Provider -> npm i react-redux
+import { Provider } from 'react-redux';   
 import store from './store';
 
 function App() {

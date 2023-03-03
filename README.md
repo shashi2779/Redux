@@ -237,6 +237,7 @@
 
 
 ## Redux :
+#### npm i redux react-redux
 - Reducer
 - initialState
 - dispatch
@@ -260,4 +261,4 @@
 - It contain two properties :
    
    -  type 
-   -  payload    
+   -  payload : ( dispatch me "value" pass karte hai with the help of payload. )
