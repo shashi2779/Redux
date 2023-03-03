@@ -284,6 +284,9 @@
   - eske pas koi information nahi hai , toh information k liye hme "store" ko import karna pda.
   - ess "store" ko as a "props" pass kar degen "Provider" ko 
   
+         
+         import { Provider } from 'react-redux'; 
+         
          <Provider store={store}>
            <Ball/>
          </Provider>
