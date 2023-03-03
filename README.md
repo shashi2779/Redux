@@ -291,6 +291,44 @@
     
   - to connect your "store" with a "components".
   - agar ye ball components ko store se bat karani hai, toh hamare pas ek function hota hai "connect"
+  - export default connect(mapStateToProps)(Ball);
+ 
+  -  "store"  -> mapsstatetoprops
+     
+     
+            // to get your state variable from redux store , (dispatch function bhi provide karta h) 
+           
+            const mapStateToProps = (store) => {   // return state-variable as props
+                return store;  // this fun return state...variable as a props in our Ball fun.
+                        
+            }
+
+
+
+
+
+
+            function Ball(props) {
+                console.log(props)
+                return (<>
+                    <h1>Balls</h1>
+                    <h2>No of Balls:{props.balls}</h2>
+                    <button>+</button>
+                    <button>-</button>
+                </>
+                )
+            }
+      
+     
+![](img/code2.png)
+![](img/code.png)
+
+
+![](img/code1.png)
+- connect :
+    
+  - to connect your "store" with a "components".
+  - agar ye ball components ko store se bat karani hai, toh hamare pas ek function hota hai "connect"
   - export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
   - to give access to the component to two things
      - first -> "store"  -> mapsstatetoprops
@@ -301,6 +339,22 @@
             const mapStateToProps = (store) => {   // return state-variable as props
                 return store;  // this fun return state...variable as a props in our Ball fun.
                         
+            }
+
+
+
+
+
+
+            function Ball(props) {
+                console.log(props)
+                return (<>
+                    <h1>Balls</h1>
+                    <h2>No of Balls:{props.balls}</h2>
+                    <button>+</button>
+                    <button>-</button>
+                </>
+                )
             }
       
      - second  -> "dispatch" -> mapdispatchtoprops
@@ -321,6 +375,3 @@
                     }
                 }
             }
-
-![](img/code2.png)
-![](img/code.png)
