@@ -233,3 +233,24 @@
         export default Bat
 
 ```
+
+
+
+## Redux :
+
+#### Reducer :
+- It contains all the state manipulation logic.
+  [state change karta hai]
+
+#### initialState :
+- your state , when your app initially renders.
+
+#### dispatch :
+- It is a function that is used to pass "action" object to reducer.
+
+#### action :
+- It is an object send by dispatch to reducer function.
+- It contain two properties :
+   
+   -  type 
+   -  payload    
