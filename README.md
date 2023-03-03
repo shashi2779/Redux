@@ -271,5 +271,56 @@
 -------------
 ### Redux => reduxwithball :
 --------------
+- provider :
+  
+  - redux ko apane app se connect kiya
+  - ess provider k through hmm apni app ko redux ke sath connect kar sakte hai.
+   - install & import  react-redux for Provider -> npm i react-redux
+  - import { Provider } from 'react-redux';  
+- store :
+  
+  - ess provider ko pata hi nhi hamara "state" kaha hai, kaun se "store" me hai ,
+  - eske pas koi information nahi hai , toh information k liye hme "store" ko import karna pda.
+  - ess "store" ko as a "props" pass kar degen "Provider" ko 
+  
+         <Provider store={store}>
+           <Ball/>
+         </Provider>
+
+- connect :
+    
+  - to connect your "store" with a "components".
+  - agar ye ball components ko store se bat karani hai, toh hamare pas ek function hota hai "connect"
+  - export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
+  - to give access to the component to two things
+     - first -> "store"  -> mapsstatetoprops
+     
+     
+            // to get your state variable from redux store , (dispatch function bhi provide karta h) 
+           
+            const mapStateToProps = (store) => {   // return state-variable as props
+                return store;  // this fun return state...variable as a props in our Ball fun.
+                        
+            }
+      
+     - second  -> "dispatch" -> mapdispatchtoprops
+
+            // dispatcher solve - fun pass[setbal,buyball] as a props 
+          
+            const mapDispatchtoProps = (dispatch) => {      // return function as props
+                return {                                   
+                    sellBall: () => {           //HINT ::=> sellBall:dispatch({})   -> [click karne prr call ho] ->  sellBall:()=>{dispatch({})} 
+                        dispatch({                     
+                            type: "decrement"
+                        })
+                    },
+                    buyBall: () => {
+                        dispatch({
+                            type: "increment"
+                        })
+                    }
+                }
+            }
+
 ![](img/code2.png)
 ![](img/code.png)
