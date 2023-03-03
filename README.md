@@ -1,4 +1,4 @@
-## first solve with "useState" then "useReducer" then "Reducer"
+## First solve with "useState" then "useReducer" then "Reducer"
 ------------------
 ### steps :
 ##### 1- counterBallWithUseState
