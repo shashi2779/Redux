@@ -237,6 +237,13 @@
 
 
 ## Redux :
+- Reducer
+- initialState
+- dispatch
+- action
+- type
+- payload
+  
 
 #### Reducer :
 - It contains all the state manipulation logic.
