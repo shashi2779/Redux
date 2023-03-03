@@ -272,7 +272,7 @@
 -------------
 ### Redux => reduxwithball :
 --------------
-- provider :
+- provider : In App.js me
   
   - redux ko apane app se connect kiya
   - ess provider k through hmm apni app ko redux ke sath connect kar sakte hai.
@@ -286,7 +286,7 @@
   
          
          import { Provider } from 'react-redux'; 
-         
+
          <Provider store={store}>
            <Ball/>
          </Provider>
