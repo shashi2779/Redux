@@ -315,7 +315,7 @@
             // to get your state variable from redux store , (dispatch function bhi provide karta h) 
            
             const mapStateToProps = (store) => {   // return state-variable as props
-                return store;  // this fun return state...variable as a props in our Ball fun.
+                return store;  // this fun return state...variable as a props in our Ball component.
                         
             }
 
