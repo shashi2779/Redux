@@ -271,5 +271,5 @@
 -------------
 ### Redux => reduxwithball :
 --------------
-![](img/code1.png)
+![](img/code2.png)
 ![](img/code.png)
