@@ -244,12 +244,12 @@
 - action
 - type
 - payload
-  
+------  
 ##### Do you learn to Redux after doing these three things :
 - state change
 - user-Input
 - some req / Db query  [async task k sath]
-  
+---------  
 
 #### Reducer :
 - It contains all the state manipulation logic.
