@@ -268,7 +268,7 @@
    -  type 
    -  payload : ( dispatch me "value" pass karte hai with the help of payload. )
 
-
+-------------
 ### Redux => reduxwithball :
 --------------
 ![](img/code1.png)
