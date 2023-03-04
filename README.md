@@ -567,7 +567,7 @@
         export default rootReducer;
 
     ```
-- store :
+#### store :
   ```js
         import { createStore } from "redux";
         import rootReducer from "./redux/rootReducer";  //esse ballReducer,batReducer dono import huaa h from rootReducer.js
@@ -577,7 +577,7 @@
 
   ```
 
-- App.js  
+#### App.js  
   ```js
     import './App.css';
     import Ball from './components/Ball';
