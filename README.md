@@ -263,7 +263,7 @@
    -  type 
    -  payload : ( dispatch me "value" pass karte hai with the help of payload. )
 ------  
-#### Do you learn to Redux after doing these four things.( agar aap ye char chije krr lete ho toh aap redux sikh jate ho ) :
+#### Do you learn to Redux after doing these four things.( agar aap ye char chije krr lete ho toh aap redux sikh jate ho ):
 - state change
 - user-Input ... 
    - payload=> x amount se change karna
