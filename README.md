@@ -309,7 +309,7 @@
   - agar ye ball components ko store se bat karani hai, toh hamare pas ek function hota hai "connect"
   - export default connect(mapStateToProps)(Ball);
  
-  -  "store"  -> mapsstatetoprops , "components" -> Ball
+  -  "store"  -> mapsstatetoprops ,     "components" -> Ball
      
      
            
