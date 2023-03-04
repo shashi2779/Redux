@@ -343,6 +343,7 @@
 
 ## Imp
 ![](img/code1.png)
+![](img/code.png)
 - connect :
     
   - to connect your "store" with a "components".
