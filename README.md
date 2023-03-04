@@ -286,18 +286,18 @@
    - install & import  react-redux for Provider 
        - npm i react-redux
        - import { Provider } from 'react-redux';  
-- store :
+   - store :
   
-  - ess provider ko pata hi nhi hamara "state" kaha hai, kaun se "store" me hai ,
-  - eske pas koi information nahi hai , toh information k liye hme "store" ko import karna pda.
-  - ess "store" ko as a "props" pass kar degen "Provider" ko 
+     - ess provider ko pata hi nhi hamara "state" kaha hai, kaun se "store" me hai ,
+     - eske pas koi information nahi hai , toh information k liye hme "store" ko import karna pda.
+     - ess "store" ko as a "props" pass kar degen "Provider" ko 
   
          
-         import { Provider } from 'react-redux'; 
+            import { Provider } from 'react-redux'; 
 
-         <Provider store={store}>
-           <Ball/>
-         </Provider>
+            <Provider store={store}>
+            <Ball/>
+            </Provider>
 
 - connect :
     
