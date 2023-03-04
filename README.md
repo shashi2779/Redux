@@ -551,7 +551,7 @@
         }
         export default batReducer;
     ```
-- rootReducer :
+- rootReducer : IMP
     
     ```js
         import { combineReducers } from "redux";
