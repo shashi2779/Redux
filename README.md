@@ -602,7 +602,7 @@
 
   ```
 
-  ##### components folder :
+  #### components folder :
 - ball.jsx 
   ```js
     import React from 'react'
