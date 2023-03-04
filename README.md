@@ -7,7 +7,8 @@
 ##### 4- sellBuyBatUseReducer
 ##### 5- In Redux -> reduxwithball
 ##### 6- In Redux -> reduxwithbat
-##### 7-
+##### 7- In Redux -> multiple -> multicomponents
+##### 8-
 
 ----------------------------------------
 ---------------------------------------
