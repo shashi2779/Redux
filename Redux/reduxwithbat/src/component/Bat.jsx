@@ -24,12 +24,12 @@ function Bat(props) {
 }
 
 
-const mapStateToProps = (store) => {
+const mapStateToProps = (store) => { // ye as a "props" pass hoga Ball components me
     return store;
 }
 
 
-const mapDispatchtoProps = (dispatch) => {
+const mapDispatchtoProps = (dispatch) => { // ye bhi as a "props" pass hoga Ball components me 
     return {
         sellBat: () => {
             
