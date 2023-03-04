@@ -345,6 +345,9 @@
 ![](img/code1.png)
 ![](img/code.png)
 - initialState => reducer => store => connect => components => dispatch => reducer
+- dispatch(action):
+  
+  - It is a function that is used to pass "action" obj to reducer.
 - Ball.js
 ```js
     import React from 'react'
