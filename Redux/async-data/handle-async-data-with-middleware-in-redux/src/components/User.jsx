@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import userFetchMiddleWare from '../redux/reducers/user/userMiddleWare';
 function User(props) {
     console.log(props);
-    useEffect(function fn() {
-        props.fetchUser();
+    useEffect(function fn() { // life-time m ek bar chalega
+        props.fetchUser();   // esko dispatch call karega
     }, []);
     return (
         <>
@@ -26,8 +26,8 @@ function mapDispatchtoProps(dispatch) {
     return {
         fetchUser: () => {
             // function
-            return dispatch(userFetchMiddleWare);    // ess dispatch se fun/obj kuchh bhi pass kare MiddleWare k pas jayega wha handle hoga phir wha se MiddleWare ka dispatch reducer k pass bhej dega
-        }
+            return dispatch(userFetchMiddleWare);    // ess dispatch se "fun/obj" kuchh bhi pass kare MiddleWare k pas jayega wha handle hoga phir wha se MiddleWare ka dispatch reducer k pass bhej dega
+        }                                            // userFetchMiddleware fun middle ware hai async-data ko handle karne k liye
     }
 }
 export default connect(mapStatetoProps, mapDispatchtoProps)(User);
