@@ -236,7 +236,7 @@
 
 
 
-## Redux :
+# Redux :
 #### npm i redux react-redux
 - Reducer
 - initialState
