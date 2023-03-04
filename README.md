@@ -6,7 +6,7 @@
 ##### 3- sellBuyBatUseState
 ##### 4- sellBuyBatUseReducer
 ##### 5- In Redux -> reduxwithball
-##### 6-
+##### 6- In Redux -> reduxwithbat
 ##### 7-
 
 ----------------------------------------
