@@ -243,6 +243,8 @@
 - state change
 - user-Input ... 
    - payload=> x amount se change karna
+     
+     -  example of Bat components => reduxwithbat
 - multiple type of data ... 
    - kahi "theme" wala hai, kahi "login" wala hai toh usko store kaise karegen
 - some req / Db query  [async task k sath]
