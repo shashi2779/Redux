@@ -477,3 +477,189 @@
                     }
                 }
             }
+
+
+### multiple type of data handle with redux :
+
+##### components folder :
+- ball.jsx 
+-  bat.jsx
+##### redux folder :
+- reducers -> 
+  - ballReducer 
+  -  batReducer
+- rootReducer :
+    
+    ```js
+        import { combineReducers } from "redux";
+        import ballReducer from "./reducers/ballReducer"
+        import batReducer from "./reducers/batReducer"
+
+        const rootReducer = combineReducers({
+            Ball: ballReducer,
+            Bat: batReducer,
+        });
+        export default rootReducer;
+
+    ```
+- store :
+  ```js
+        import { createStore } from "redux";
+        import rootReducer from "./redux/rootReducer";  //esse ballReducer,batReducer dono import huaa h from rootReducer.js
+        const store = createStore(rootReducer);
+
+        export default store;
+
+  ```
+
+- App.js  
+  ```js
+    import './App.css';
+    import Ball from './components/Ball';
+    import Bat from './components/Bat';
+    import { Provider } from 'react-redux';   //install react-redux -> npm i react-redux for Provider
+    import store from './store';
+
+    function App() {
+    return (
+    
+    <>
+    <Provider store={store}>
+        <Ball/>
+        <Bat/>
+    </Provider>
+    
+    </>
+    );
+    }
+
+    export default App;
+
+  ```
+
+  ##### components folder :
+- ball.jsx 
+  ```js
+    import React from 'react'
+    import { connect } from "react-redux";
+
+    function Ball(props) {
+        console.log(props)
+        return (<>
+            <h1>Balls</h1>
+            <h2>No of Balls:{props.balls}</h2>
+            <button
+                onClick={props.buyBall} 
+            >+</button>
+            <button
+                onClick={props.sellBall}
+
+            >-</button>
+        </>
+        )
+    }
+
+
+    // to get your state variable from redux store , (dispatch function bhi provide karta h) 
+    // this fun return state...variable as a props in our Ball fun.
+    const mapStateToProps = (store) => {   // return state-variable as props
+        return store.Ball;                       
+    }
+
+
+
+    // dispatcher solve - fun pass[setbal,buyball] as a props 
+    const mapDispatchtoProps = (dispatch) => {      // return function as props
+        return {                                   
+            sellBall: () => {           //HINT ::=> sellBall:dispatch({})   -> [click karne prr call ho] ->  sellBall:()=>{dispatch({})} 
+                dispatch({                     
+                    type: "decrement"
+                })
+            },
+            buyBall: () => {
+                dispatch({
+                    type: "increment"
+                })
+            }
+        }
+    }
+
+
+    // to give access to the component to two things
+    //  first store  -> mapsstatetoprops
+    // second  -> dispatch -> mapdispatchtoprops
+
+    export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
+
+    /*_________________OR_________________________*/
+
+
+    // const connectdWIthpropsFns = connect(mapStateToProps, mapDispatchtoProps)
+    // const connectedWithBall = connectdWIthpropsFns(Ball);
+    // export default connectedWithBall;
+
+  ``` 
+
+-  bat.jsx
+  ```js
+    import React from 'react'
+    import { connect } from "react-redux";
+
+
+    function Bat(props) {
+        console.log();
+        return (
+            <>
+                <h1>Bat</h1>
+                <h2>No of Bat:{props.bat}</h2>
+                <input type="number" value={props.value}
+                    onChange={(e) => {
+                        let value = e.target.value;
+                        props.setValue(value);
+                    }} />
+                <button
+                    onClick={props.sellBat}
+                >Sell</button>
+                <button
+                    onClick={props.buyBat}
+                >Buy</button>
+            </>
+        )
+    }
+
+
+    const mapStateToProps = (store) => {
+        return store.Bat;
+    }
+
+
+    const mapDispatchtoProps = (dispatch) => {
+        return {
+            sellBat: () => {
+                
+                dispatch({ type: "sell_bat" })
+
+            },
+            buyBat: () => {
+            
+                dispatch({ type: "buy_bat" })
+
+            },
+            setValue: (value) => {
+                dispatch({
+                    type: "set_value",
+                    payload: value
+                })
+            }
+        }
+
+    }
+
+
+    export default connect(mapStateToProps,mapDispatchtoProps)(Bat);
+
+    // const connectdWIthpropsFns = connect(mapStateToProps, mapDispatchtoProps);
+    // const connectedWithBat = connectdWIthpropsFns(Bat);
+    // export default connectedWithBat;
+
+  ```
