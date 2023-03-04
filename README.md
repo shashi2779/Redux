@@ -237,6 +237,16 @@
 
 
 # Redux :
+
+#### Do you learn to Redux after doing these four things.( agar aap ye char chije krr lete ho toh aap redux sikh jate ho ):
+- state change
+- user-Input ... 
+   - payload=> x amount se change karna
+- multiple type of data ... 
+   - kahi "theme" wala hai, kahi "login" wala hai toh usko store kaise karegen
+- some req / Db query  [async task k sath]
+--------- 
+
 #### npm i redux react-redux
 - Reducer
 - initialState
@@ -263,14 +273,7 @@
    -  type 
    -  payload : ( dispatch me "value" pass karte hai with the help of payload. )
 ------  
-#### Do you learn to Redux after doing these four things.( agar aap ye char chije krr lete ho toh aap redux sikh jate ho ):
-- state change
-- user-Input ... 
-   - payload=> x amount se change karna
-- multiple type of data ... 
-   - kahi "theme" wala hai, kahi "login" wala hai toh usko store kaise karegen
-- some req / Db query  [async task k sath]
----------  
+ 
 
 -------------
 ### Redux => reduxwithball :
