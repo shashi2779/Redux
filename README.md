@@ -390,9 +390,6 @@
    -  payload : ( dispatch me "value" pass karte hai with the help of payload. )
 ------  
  
-- dispatch(action):
-  
-  - It is a function that is used to pass "action" obj to reducer.
 - Ball.js
 ```js
     import React from 'react'
