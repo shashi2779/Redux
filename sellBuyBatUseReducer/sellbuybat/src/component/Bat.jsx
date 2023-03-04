@@ -48,6 +48,7 @@ function Bat() {
      <input type={'number'}  value={state.value} 
         onChange={(e)=>{
             let typeValue = e.target.value; 
+            //dispatch("action" as obj), action =>(1)type , (2)payload
             dispatch({ type:'set_value' , payload:typeValue }) // dispatch me value pass kiye with the help of "payload"
         }}                                                    // payload se data pass krr rhe h , matlab action form ho rha 
      />

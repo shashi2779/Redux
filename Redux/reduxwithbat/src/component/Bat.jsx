@@ -41,7 +41,7 @@ const mapDispatchtoProps = (dispatch) => { // ye bhi as a "props" pass hoga Ball
             dispatch({ type: "buy_bat" })
 
         },
-        setValue: (value) => {
+        setValue: (value) => {    //dispatch("action" as obj), action =>(1)type , (2)payload 
             dispatch({
                 type: "set_value",
                 payload: value
