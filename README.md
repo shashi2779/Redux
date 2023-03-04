@@ -413,9 +413,10 @@
     
   - to connect your "store" with a "components".
   - agar ye ball components ko store se bat karani hai, toh hamare pas ek function hota hai "connect"
+  - - export default connect(dispatch,store)(components)
   - export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
   - to give access to the component to two things:
-      - export default connect(dispatch,store)(components)
+      
       - first -> "store"  -> mapsstatetoprops
       - second  -> "dispatch" -> mapdispatchtoprops
          - -----------------------------------------------------
