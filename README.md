@@ -727,3 +727,6 @@
     // export default connectedWithBat;
 
   ```
+
+## asynchronous-task with redux :  
+-
