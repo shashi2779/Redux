@@ -277,7 +277,7 @@
 ![](img/code2.png)
 ![](img/code.png)
 
-- initialState => reducer => store => connect [component and store ko connect karta hai]
+- initialState => reducer => store => connect [ component(Ball) and store(mapStateToProps) ko connect karta hai ]
 
 - provider : ( In App.js me )
   
