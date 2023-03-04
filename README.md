@@ -263,7 +263,7 @@
    -  type 
    -  payload : ( dispatch me "value" pass karte hai with the help of payload. )
 ------  
-##### Do you learn to Redux after doing these three things : ( agar aap ye teen chije krr lete ho toh aap redux sikh jate ho )
+##### Do you learn to Redux after doing these three things.( agar aap ye teen chije krr lete ho toh aap redux sikh jate ho ) :
 - state change
 - user-Input
 - some req / Db query  [async task k sath]
