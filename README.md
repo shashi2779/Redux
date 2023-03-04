@@ -8,7 +8,8 @@
 ##### 5- In Redux -> reduxwithball
 ##### 6- In Redux -> reduxwithbat
 ##### 7- In Redux -> multiple -> multicomponents
-##### 8-
+##### 8- In Redux -> async-data -> waited-data-by-use-effect
+##### 9- In Redux -> async-data -> handle-async-data-with-middleware-in-redux
 
 ----------------------------------------
 ---------------------------------------
