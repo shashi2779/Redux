@@ -479,7 +479,7 @@
             }
 
 
-### multiple type of data handle with redux :
+## multiple type of data handle with redux :
 
 ##### components folder :
 - ball.jsx 
