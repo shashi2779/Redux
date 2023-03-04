@@ -344,6 +344,7 @@
 ## Imp
 ![](img/code1.png)
 ![](img/code.png)
+- initialState => reducer => store => connect => components => dispatch => reducer
 - Ball.js
 ```js
     import React from 'react'
