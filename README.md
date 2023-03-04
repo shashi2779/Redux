@@ -263,9 +263,12 @@
    -  type 
    -  payload : ( dispatch me "value" pass karte hai with the help of payload. )
 ------  
-##### Do you learn to Redux after doing these three things.( agar aap ye teen chije krr lete ho toh aap redux sikh jate ho ) :
+#### Do you learn to Redux after doing these four things.( agar aap ye char chije krr lete ho toh aap redux sikh jate ho ) :
 - state change
-- user-Input
+- user-Input ... 
+   - payload=> x amount se change karna
+- multiple type of data ... 
+   - kahi "theme" wala hai, kahi "login" wala hai toh usko store kaise karegen
 - some req / Db query  [async task k sath]
 ---------  
 
