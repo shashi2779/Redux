@@ -353,7 +353,7 @@
     import React from 'react'
     import { connect } from "react-redux";
 
-    function Ball(props) {
+    function Ball(props) {    // esme store & dispatch as a "props" pass huye h 
         console.log(props)
         return (<>
             <h1>Balls</h1>
