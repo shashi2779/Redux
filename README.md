@@ -298,7 +298,7 @@
 
             
             <Provider store={store}>
-            <Ball/>
+             <Ball/>
             </Provider>
 
 
