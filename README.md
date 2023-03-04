@@ -355,6 +355,41 @@
 ![](img/code1.png)
 ![](img/code.png)
 - initialState => reducer => store => connect => components => dispatch => reducer
+#### initialState :
+- your state , when your app initially renders.
+- obj k form me rahti hai
+- state ki default value aati h esme
+#### Reducer :
+- It contains all the state manipulation logic.
+  [state change karta hai]
+- jo bhi "state" change hogi wo aapke reducer me ja kar hogi  
+
+#### store : 
+- 
+#### connect :
+- To connect your "store" with a "components"
+#### components :
+-
+
+#### dispatch :
+- It is a function that is used to pass "action" object to reducer.
+- dispatch ek fun hai , jo action bhejta hai "reducer" ke pas taki wo "state" ko change kare
+-  dispatch(action as obj) => action => (1) type  (2) payload
+```js
+ dispatch({
+     type: ...... , 
+     payload : value yha aayega
+ })
+```
+#### action :
+- It is an object send by dispatch to reducer function.
+- aapke "state" change karne me help karta hai
+- It contain two properties :
+   
+   -  type 
+   -  payload : ( dispatch me "value" pass karte hai with the help of payload. )
+------  
+ 
 - dispatch(action):
   
   - It is a function that is used to pass "action" obj to reducer.
