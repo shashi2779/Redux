@@ -277,6 +277,8 @@
 ![](img/code2.png)
 ![](img/code.png)
 
+- initialState => reducer => store => connect 
+
 - provider : ( In App.js me )
   
   - redux ko apane app se connect kiya
