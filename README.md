@@ -282,7 +282,7 @@
 - provider : ( In App.js me )
   
   - "redux" ko apane "app." se connect kiya
-  - ess provider k through hmm apni app ko redux ke sath connect kar sakte hai.
+  - ess provider k through hmm apni "app" ko "redux" ke sath connect kar sakte hai.
    - install & import  react-redux for Provider -> npm i react-redux
   - import { Provider } from 'react-redux';  
 - store :
