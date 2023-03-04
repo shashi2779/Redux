@@ -350,6 +350,7 @@
   - to give access to the component to two things
       - first -> "store"  -> mapsstatetoprops
       - second  -> "dispatch" -> mapdispatchtoprops
+      - -----------------------------------------------------
      - first -> "store"  -> mapsstatetoprops
      
      
