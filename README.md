@@ -272,7 +272,8 @@
 -------------
 ### Redux => reduxwithball :
 --------------
-
+- esme dispatch ko samil nhi kiye hai :
+  
 ![](img/code2.png)
 ![](img/code.png)
 
