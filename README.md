@@ -481,7 +481,7 @@
 
 ## multiple type of data handle with redux :
 
-#### redux folder => [reducers folder -> ballReducer , batReducer]  , rootReducer => store => app.js => connect => components folder -> Ball.jsx , Bat.jsx => dispatch => [redux-> reducers,rootReducer]
+#### redux folder => [reducers folder -> ballReducer , batReducer]  , rootReducer => store => app.js[Provider] => connect => components folder -> Ball.jsx , Bat.jsx => dispatch => [redux-> reducers,rootReducer]
 #### redux folder :=>
 - reducers -> 
   - ballReducer 
