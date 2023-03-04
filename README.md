@@ -511,9 +511,9 @@
                 }
             }
 
-
+---------------
 ## multiple type of data handle with redux :
-
+----------------------
 #### redux folder => [reducers folder -> ballReducer , batReducer]  , rootReducer => store => app.js[Provider] => connect => components folder -> Ball.jsx , Bat.jsx => dispatch => [redux folder -> reducers,rootReducer]
 #### redux folder :=>
 - reducers -> 
@@ -759,6 +759,7 @@
     // export default connectedWithBat;
 
   ```
-
-## asynchronous-task with redux :  
+-----------------------
+## asynchronous-task with redux : 
+-------------------- 
 -
