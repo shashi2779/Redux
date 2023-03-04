@@ -387,7 +387,7 @@
             // dispatcher solve - fun pass[setbal,buyball] as a props 
           
             const mapDispatchtoProps = (dispatch) => {      // return function as props
-                return {                                   
+                return {                         //HINT ::=> sellBall:dispatch("action" as object lega)           
                     sellBall: () => {           //HINT ::=> sellBall:dispatch({})   -> [click karne prr call ho] ->  sellBall:()=>{dispatch({})} 
                         dispatch({                     
                             type: "decrement"
