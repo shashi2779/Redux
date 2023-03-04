@@ -370,9 +370,9 @@
     }
 
 
-    // to get your state variable from redux store , (dispatch function bhi provide karta h) 
-    const mapStateToProps = (store) => {   // return state-variable as props
-        return store;  // this fun return state...variable as a props in our Ball fun.
+    // to get your state variable from redux store , (store dispatch function bhi provide karta h) 
+    const mapStateToProps = (store) => {   
+        return store;  // this fun return state-variable as a props in our Ball fun.
                 
     }
 
@@ -380,7 +380,7 @@
 
     // dispatcher solve - fun pass[setbal,buyball] as a props 
     const mapDispatchtoProps = (dispatch) => {      // return function as props
-        return {                                   
+        return {                         //HINT ::=> sellBall:dispatch(action as obj)          
             sellBall: () => {           //HINT ::=> sellBall:dispatch({})   -> [click karne prr call ho] ->  sellBall:()=>{dispatch({})} 
                 dispatch({                     
                     type: "decrement"
