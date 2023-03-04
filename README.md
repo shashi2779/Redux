@@ -272,6 +272,10 @@
 -------------
 ### Redux => reduxwithball :
 --------------
+
+![](img/code2.png)
+![](img/code.png)
+
 - provider : ( In App.js me )
   
   - redux ko apane app se connect kiya
@@ -326,8 +330,7 @@
             export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
       
      
-![](img/code2.png)
-![](img/code.png)
+
 
 
 ![](img/code1.png)
