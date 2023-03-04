@@ -481,13 +481,78 @@
 
 ## multiple type of data handle with redux :
 
-##### components folder :
+##### components folder :=>
 - ball.jsx 
 -  bat.jsx
-##### redux folder :
+##### redux folder :=>
 - reducers -> 
   - ballReducer 
+     ```js
+
+        let initialState = {
+            balls: 10
+        }
+
+        // when state is not passed -> initial state -> 10
+        function ballReducer(state = initialState, action) {
+            switch (action.type) {
+                case "increment":
+                    return {
+                        balls: state.balls + 1
+                    };
+                    break;
+                case "decrement":
+                    if(state.balls>0)
+                    return {
+                        balls: state.balls - 1
+                    };
+                    break;
+                default:
+                    return state;
+            }
+        }
+
+        export default ballReducer;
+
+     ```
+
   -  batReducer
+     ```js
+        let initialState = {
+            bat: 10,
+            value: ""
+        }
+
+        function batReducer(state = initialState, action) {
+            switch (action.type) {
+                case "sell_bat":
+                    if (state.bat - state.value < 0) {
+                        return {
+                            ...state,
+                            value: ""
+                        }
+                    } else {
+                        return {
+                            bat: state.bat - state.value,
+                            value: ""
+                        }
+                    }
+                case "buy_bat":
+                    return {
+                        bat: state.bat + Number(state.value),
+                        value: ""
+                    }
+                case "set_value":
+                    return {
+                        bat: state.bat,
+                        value: action.payload
+                    }
+                default:
+                    return state
+            }
+        }
+        export default batReducer;
+    ```
 - rootReducer :
     
     ```js
