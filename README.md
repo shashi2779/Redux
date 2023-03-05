@@ -763,7 +763,7 @@
 ## asynchronous-task with redux : 
 ------------------
 - initialState --> Reducer => store => connect => components => dispatch => middleWare => reducer
-- user.js => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
+- ** asynchronous-task k liye ** # user.js => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
  
 ![](img/pic2.png)
 
