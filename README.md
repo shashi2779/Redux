@@ -763,7 +763,10 @@
 ## asynchronous-task with redux : 
 ------------------
 - user.js => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
--
+ 
+![](img/pic2.png)
+![](img/pic3.png)
+
 
 ```js
 user.js
@@ -903,7 +906,7 @@ export default App;
 ----------------------
 ## with asynchronous-task + multiple type of data in Rdux :
 --------------------
-
+![](img/pic2.png)
 ![](img/pic.jpeg)
 - initialState --> Reducer => store => connect => components => middleWare => dispatch => Reducer 
 - [components --> user.jsx] => middleWare => dispatch => Reducer => store => connect => components 
