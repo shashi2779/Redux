@@ -790,9 +790,13 @@ function User(props) {
         </>
     )
 }
+
+
 function mapStatetoProps(store) {
     return store.User;              // rootUser.js se User aaya h , toh "store.Ball" means store se Ball ka data access kiye  
 }
+
+
 function mapDispatchtoProps(dispatch) {
     return {
         fetchUser: () => {
