@@ -764,7 +764,7 @@
 ------------------
 - user.js => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
 -
-- user.js => reducers -> (ballReducer.js , batReducer.js ), user[userMiddleWare.js => userReducer.js] => store.js => App.js => connect => user.js
+
 ```js
 user.js
 =========
@@ -899,3 +899,404 @@ export default App;
 
 
 ```
+
+----------------------
+### with asynchronous-task + multiple type of data in Rdux :
+--------------------
+
+![](img/pic.jpeg)
+- initialState --> Reducer => store => connect => components => middleWare => dispatch => Reducer 
+
+
+- components --> user.jsx
+```js
+user.js
+=========
+
+import React from 'react'
+import { useEffect } from 'react'
+import { connect } from "react-redux";
+import userFetchMiddleWare from '../redux/reducers/user/userMiddleWare';
+function User(props) {
+    console.log(props);
+    useEffect(function fn() { // life-time m ek bar chalega
+        props.fetchUser();   // esko dispatch call karega
+    }, []);
+    return (
+        <>
+            <h1>USER</h1>
+            {props.loading == true ?
+                <div>Loading</div> :
+                // console.log(props)
+                <h2>{props.users.name}</h2>
+
+            }
+        </>
+    )
+}
+
+
+function mapStatetoProps(store) {
+    return store.User;              // rootUser.js se User aaya h , toh "store.Ball" means store se Ball ka data access kiye  
+}
+
+
+function mapDispatchtoProps(dispatch) {
+    return {
+        fetchUser: () => {
+            // function
+            return dispatch(userFetchMiddleWare);    // ess dispatch se "fun/obj" kuchh bhi pass kare MiddleWare k pas jayega wha handle hoga phir wha se MiddleWare ka dispatch reducer k pass bhej dega
+        }                                            // userFetchMiddleware fun middle ware hai async-data ko handle karne k liye
+    }
+}
+export default connect(mapStatetoProps, mapDispatchtoProps)(User);
+
+
+```
+
+- middleWare
+```js
+userMiddleWare.js
+==================
+
+// middleware fun banate hai "async-data" ko handle karne k liye
+// dispatch mil jaata hai middleware ko
+// ye middleware fun hi dispatch marega , ye dispatch bhej diya Reducer ko 
+export default async function userFetchMiddleWare(dispatch) {
+    let resp = await fetch("https://jsonplaceholder.typicode.com/users/1"); // fetch hua
+   
+    let users = await resp.json(); // data aya => jo "user data" aaya use dispatch me pass krr diya
+    
+    dispatch({                     // dispatch hua , abb ja ke check hoga reducer me
+        type: "success_users",
+        payload: users
+    })
+}
+
+```
+- reducer
+```js
+userReducer.js
+===============
+
+
+let initialState = {
+    users: "",
+    loading: true
+}
+function userReducer(state = initialState, action) {
+    switch (action.type) {
+        case "success_users":
+            return {
+                users: action.payload,
+                loading: false
+            }
+        default:
+            return state;
+    }
+}
+export default userReducer;
+
+```
+
+```js
+BallReducer.js
+===============
+
+let initialState = {
+    balls: 10
+}
+
+// when state is not passed -> initial state -> 10
+function ballReducer(state = initialState, action) {
+    switch (action.type) {
+        case "increment":
+            return {
+                balls: state.balls + 1
+            };
+            break;
+        case "decrement":
+            if(state.balls>0)
+              return {
+                balls: state.balls - 1
+              };
+              break;
+        default:
+            return state;
+    }
+}
+
+export default ballReducer;
+
+```
+
+```js
+BatReducer.js
+==============
+
+let initialState = {
+    bat: 10,
+    value: ""
+}
+
+function batReducer(state = initialState, action) {
+    switch (action.type) {
+        case "sell_bat":
+            if (state.bat - state.value < 0) {
+                return {
+                    ...state,
+                    value: ""
+                }
+            } else {
+                return {
+                    bat: state.bat - state.value,
+                    value: ""
+                }
+            }
+        case "buy_bat":
+            return {
+                bat: state.bat + Number(state.value),
+                value: ""
+            }
+        case "set_value":
+            return {
+                bat: state.bat,
+                value: action.payload
+            }
+        default:
+            return state
+    }
+}
+export default batReducer;
+
+```
+
+```js
+rootReducer.js
+===============
+
+import { combineReducers } from "redux";
+import ballReducer from "./reducers/ballReducer"
+import batReducer from "./reducers/batReducer"
+import userReducer from "./reducers/user/userReducer";
+
+const rootReducer = combineReducers({
+    Ball: ballReducer,
+    Bat: batReducer,
+    User: userReducer
+});
+export default rootReducer;
+
+```
+
+- store
+```js
+store.js
+=========
+
+// npm i redux react-redux
+
+import { createStore ,applyMiddleware} from "redux";
+// npm i redux-thunk
+import thunk from "redux-thunk";
+import rootReducer from "./redux/rootReducer";  //esse ballReducer,batReducer dono import huaa h from rootReducer.js
+const store = createStore(rootReducer,applyMiddleware(thunk));
+
+export default store;
+
+```
+
+- App.js
+```js
+App.js
+=======
+
+import './App.css';
+import Ball from './components/Ball';
+import Bat from './components/Bat';
+import { Provider } from 'react-redux';   //install react-redux -> npm i react-redux for Provider
+import store from './store';
+import User from "./components/User";
+
+function App() {
+  return (
+   
+   <>
+   <Provider store={store}>
+       <Ball/>
+       <Bat/>
+       <User/>
+   </Provider>
+   
+   </>
+  );
+}
+
+export default App;
+
+
+```
+
+- components 
+
+```js
+Ball.jsx
+=========
+
+import React from 'react'
+import { connect } from "react-redux";
+
+function Ball(props) {
+    console.log(props)
+    return (<>
+        <h1>Balls</h1>
+        <h2>No of Balls:{props.balls}</h2>
+        <button
+            onClick={props.buyBall} 
+        >+</button>
+        <button
+            onClick={props.sellBall}
+
+        >-</button>
+    </>
+    )
+}
+
+
+// to get your state variable from redux store , (dispatch function bhi provide karta h) 
+// this fun return state...variable as a props in our Ball fun.
+const mapStateToProps = (store) => {   // return state-variable as props
+   
+    return store.Ball;       // rootUser.js se Ball aaya h , toh "store.Ball" means store se Ball ka data access kiye               
+
+}
+
+
+
+// dispatcher solve - fun pass[setbal,buyball] as a props 
+const mapDispatchtoProps = (dispatch) => {      // return function as props
+    return {                                   
+        sellBall: () => {           //HINT ::=> sellBall:dispatch({})   -> [click karne prr call ho] ->  sellBall:()=>{dispatch({})} 
+            dispatch({                     
+                type: "decrement"
+            })
+        },
+        buyBall: () => {
+            dispatch({
+                type: "increment"
+            })
+        }
+    }
+}
+
+
+// to give access to the component to two things
+//  first store  -> mapsstatetoprops
+// second  -> dispatch -> mapdispatchtoprops
+
+export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
+
+```
+
+```js
+Bat.jsx
+========
+
+import React from 'react'
+import { connect } from "react-redux";
+
+
+function Bat(props) {
+    console.log();
+    return (
+        <>
+            <h1>Bat</h1>
+            <h2>No of Bat:{props.bat}</h2>
+            <input type="number" value={props.value}
+                onChange={(e) => {
+                    let value = e.target.value;
+                    props.setValue(value);
+                }} />
+            <button
+                onClick={props.sellBat}
+            >Sell</button>
+            <button
+                onClick={props.buyBat}
+            >Buy</button>
+        </>
+    )
+}
+
+
+const mapStateToProps = (store) => {
+    return store.Bat;
+}
+
+
+const mapDispatchtoProps = (dispatch) => {
+    return {
+        sellBat: () => {
+            
+            dispatch({ type: "sell_bat" })
+
+        },
+        buyBat: () => {
+           
+            dispatch({ type: "buy_bat" })
+
+        },
+        setValue: (value) => {
+            dispatch({
+                type: "set_value",
+                payload: value
+            })
+        }
+    }
+
+}
+
+
+export default connect(mapStateToProps,mapDispatchtoProps)(Bat);
+
+```
+
+```js
+User.jsx
+=========
+
+import React from 'react'
+import { useEffect } from 'react'
+import { connect } from "react-redux";
+import userFetchMiddleWare from '../redux/reducers/user/userMiddleWare';
+function User(props) {
+    console.log(props);
+    useEffect(function fn() { // life-time m ek bar chalega
+        props.fetchUser();   // esko dispatch call karega
+    }, []);
+    return ( 
+        <>
+            <h1>USER</h1>
+            {props.loading == true ?
+                <div>Loading</div> :
+                // console.log(props)
+                <h2>{props.users.name}</h2>
+
+            }
+        </>
+    )
+}
+function mapStatetoProps(store) {
+    return store.User;              // rootUser.js se User aaya h , toh "store.Ball" means store se Ball ka data access kiye  
+}
+function mapDispatchtoProps(dispatch) {
+    return {
+        fetchUser: () => {
+            // function
+            return dispatch(userFetchMiddleWare);    // ess dispatch se "fun/obj" kuchh bhi pass kare MiddleWare k pas jayega wha handle hoga phir wha se MiddleWare ka dispatch reducer k pass bhej dega
+        }                                            // userFetchMiddleware fun middle ware hai async-data ko handle karne k liye
+    }
+}
+export default connect(mapStatetoProps, mapDispatchtoProps)(User);
+
+```
+

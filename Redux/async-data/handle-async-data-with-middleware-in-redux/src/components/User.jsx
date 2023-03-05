@@ -7,7 +7,7 @@ function User(props) {
     useEffect(function fn() { // life-time m ek bar chalega
         props.fetchUser();   // esko dispatch call karega
     }, []);
-    return (
+    return ( 
         <>
             <h1>USER</h1>
             {props.loading == true ?
