@@ -901,7 +901,7 @@ export default App;
 ```
 
 ----------------------
-### with asynchronous-task + multiple type of data in Rdux :
+## with asynchronous-task + multiple type of data in Rdux :
 --------------------
 
 ![](img/pic.jpeg)
