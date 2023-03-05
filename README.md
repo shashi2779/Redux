@@ -765,7 +765,8 @@
 - user.js => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
  
 ![](img/pic2.png)
-![](img/pic3.png)
+
+![](img/pic3.jpg)
 
 
 ```js
