@@ -761,5 +761,135 @@
   ```
 -----------------------
 ## asynchronous-task with redux : 
--------------------- 
--
+------------------
+- user.js => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
+```js
+user.js
+=========
+
+import React from 'react'
+import { useEffect } from 'react'
+import { connect } from "react-redux";
+import userFetchMiddleWare from '../redux/reducers/user/userMiddleWare';
+function User(props) {
+    console.log(props);
+    useEffect(function fn() { // life-time m ek bar chalega
+        props.fetchUser();   // esko dispatch call karega
+    }, []);
+    return (
+        <>
+            <h1>USER</h1>
+            {props.loading == true ?
+                <div>Loading</div> :
+                // console.log(props)
+                <h2>{props.users.name}</h2>
+
+            }
+        </>
+    )
+}
+function mapStatetoProps(store) {
+    return store.User;              // rootUser.js se User aaya h , toh "store.Ball" means store se Ball ka data access kiye  
+}
+function mapDispatchtoProps(dispatch) {
+    return {
+        fetchUser: () => {
+            // function
+            return dispatch(userFetchMiddleWare);    // ess dispatch se "fun/obj" kuchh bhi pass kare MiddleWare k pas jayega wha handle hoga phir wha se MiddleWare ka dispatch reducer k pass bhej dega
+        }                                            // userFetchMiddleware fun middle ware hai async-data ko handle karne k liye
+    }
+}
+export default connect(mapStatetoProps, mapDispatchtoProps)(User);
+
+
+```
+
+```js
+userMiddleWare.js
+==================
+
+// middleware fun banate hai "async-data" ko handle karne k liye
+// dispatch mil jaata hai middleware ko
+// ye middleware fun hi dispatch marega , ye dispatch bhej diya Reducer ko 
+export default async function userFetchMiddleWare(dispatch) {
+    let resp = await fetch("https://jsonplaceholder.typicode.com/users/1"); // fetch hua
+   
+    let users = await resp.json(); // data aya => jo "user data" aaya use dispatch me pass krr diya
+    
+    dispatch({                     // dispatch hua , abb ja ke check hoga reducer me
+        type: "success_users",
+        payload: users
+    })
+}
+
+```
+
+```js
+userReducer.js
+===============
+
+
+let initialState = {
+    users: "",
+    loading: true
+}
+function userReducer(state = initialState, action) {
+    switch (action.type) {
+        case "success_users":
+            return {
+                users: action.payload,
+                loading: false
+            }
+        default:
+            return state;
+    }
+}
+export default userReducer;
+
+```
+
+```js
+store.js
+=========
+
+// npm i redux react-redux
+
+import { createStore ,applyMiddleware} from "redux";
+// npm i redux-thunk
+import thunk from "redux-thunk";
+import rootReducer from "./redux/rootReducer";  //esse ballReducer,batReducer dono import huaa h from rootReducer.js
+const store = createStore(rootReducer,applyMiddleware(thunk));
+
+export default store;
+
+```
+
+```js
+App.js
+=======
+
+import './App.css';
+import Ball from './components/Ball';
+import Bat from './components/Bat';
+import { Provider } from 'react-redux';   //install react-redux -> npm i react-redux for Provider
+import store from './store';
+import User from "./components/User";
+
+function App() {
+  return (
+   
+   <>
+   <Provider store={store}>
+       <Ball/>
+       <Bat/>
+       <User/>
+   </Provider>
+   
+   </>
+  );
+}
+
+export default App;
+
+
+```
