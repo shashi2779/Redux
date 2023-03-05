@@ -762,6 +762,8 @@
 -----------------------
 ## asynchronous-task with redux : 
 ------------------
+- user.js => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
+-
 - user.js => reducers -> (ballReducer.js , batReducer.js ), user[userMiddleWare.js => userReducer.js] => store.js => App.js => connect => user.js
 ```js
 user.js
