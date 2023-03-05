@@ -906,7 +906,7 @@ export default App;
 
 ![](img/pic.jpeg)
 - initialState --> Reducer => store => connect => components => middleWare => dispatch => Reducer 
-
+- [components --> user.jsx] => middleWare => dispatch => Reducer => store => connect => components 
 
 - components --> user.jsx
 ```js
