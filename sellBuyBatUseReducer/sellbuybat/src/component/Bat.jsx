@@ -31,8 +31,8 @@ function reducer(state,action){   // dispatch related to action , dispatch passe
            case 'set_value':
             return{
                 bat:state.bat,
-                value:action.payload     // jo dispatch se object pass karte h use "action" bolte h 
-            }                           //  dispatch se  [type='set_value'] & [payload] pass huaa h toh action se hi access karte h ..  i.e action.payload
+                value:action.payload     // dispatch se as a obj "action" pass karte hai 
+            }                           //  action (1) type (2) payload => se dispatch me "value" pass karte hai.
          break;                          
     }
 }
@@ -48,7 +48,7 @@ function Bat() {
      <input type={'number'}  value={state.value} 
         onChange={(e)=>{
             let typeValue = e.target.value; 
-            //dispatch("action" as obj), action =>(1)type , (2)payload
+            //dispatch("action" as obj leta hai), action =>(1)type , (2)payload
             dispatch({ type:'set_value' , payload:typeValue }) // dispatch me value pass kiye with the help of "payload"
         }}                                                    // payload se data pass krr rhe h , matlab action form ho rha 
      />
