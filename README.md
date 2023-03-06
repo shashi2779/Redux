@@ -1052,7 +1052,7 @@ export default connect(mapStateToProps,mapDispatchtoProps)(Bat);
 ## asynchronous-task with redux : 
 ------------------
 - initialState --> Reducer => store => connect => components => dispatch => middleWare => reducer
-- ** asynchronous-task k liye ** # user.js => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
+- ** asynchronous-task k liye ** # user.js => dispatch => userMiddleWare.js => userReducer.js => store.js => App.js => connect => user.js
  
 ![](img/pic2.png)
 

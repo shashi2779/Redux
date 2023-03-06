@@ -16,6 +16,7 @@ function User() {
       }, 1000);
     })()
   }, [])
+  
   return (
     <>
       <h1>USER</h1>
