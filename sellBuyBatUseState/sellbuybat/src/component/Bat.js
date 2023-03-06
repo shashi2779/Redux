@@ -6,12 +6,12 @@ function Bat() {
 
    let sellBat = () =>{
              setbat(bat-toSell)
-             setToChangeBat('') // input se value hta rhe jo seen hoti h , input ka kam hone k bad bhi (with help of input value)
+             setToChangeBat('') // input se value hta rhe jo seen hoti h , sell hone k bad bhi 
    }
 
    let buyBat = () =>{
         setbat(bat+Number(toSell))
-        setToChangeBat('')
+        setToChangeBat('')     // input se value hta rhe jo seen hoti h , buy hone k bad bhi
    }
 
   return (
@@ -19,8 +19,8 @@ function Bat() {
     <h1>Bat</h1>
      <h1>no of bats:{bat}</h1>
      <input type={'number'} value={toSell} onChange={(e)=>{
-        let value = e.target.value
-        setToChangeBat(value)}}/>
+        let valuee = e.target.value
+        setToChangeBat(valuee)}}/>
      <button onClick={sellBat}>sell</button>
      <button onClick={buyBat}>buy</button>
     </>

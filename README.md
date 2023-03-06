@@ -202,12 +202,13 @@
 
             let sellBat = () =>{
                         setbat(bat-toSell)
-                        setToChangeBat('') // input se value hta rhe jo seen hoti h , input ka kam hone k bad bhi (with help of input value)
+                        setToChangeBat('') // input se value hta rhe jo seen hoti h , sell hone k bad bhi
+                        
             }
 
             let buyBat = () =>{
                     setbat(bat+Number(toSell))
-                    setToChangeBat('')
+                    setToChangeBat('')          // input se value hta rhe jo seen hoti h , buy hone k bad bhi 
             }
 
             return (
