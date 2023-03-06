@@ -433,7 +433,7 @@
             }
 
 
-            export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
+            export default connect(mapStateToProps)(Ball);
       
      
 
