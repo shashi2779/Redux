@@ -64,6 +64,7 @@
     - reducer() function as a parameter "state", "action" leta hai.
          
          - reducer , state change karta hai.
+         - dispatch ek fun hai , jo action bhejta hai "reducer" ke pas taki wo "state" ko change kare
       
            
            
@@ -86,13 +87,18 @@
    
    - increment , decrement => enn dono k liye useReducer ek common function dega "dispatch()" nam se.
    - dispatch me value pass karte hai with the help of "payload"
+   - dispatch("action" as a obj) = dispatch({...}) 
+   
+      -  dispatch ek fun hai , jo "action" bhejta hai "reducer" ke pas taki wo "state" ko change kare
         
-          <input type={'number'}  value={state.value} 
-            onChange={(e)=>{
-                let typeValue = e.target.value; 
-                dispatch({ type:'set_value' , payload:typeValue }) // dispatch me value pass kiye with the help of "payload"
-                }}   
-           />
+         
+         
+                <input type={'number'}  value={state.value} 
+                    onChange={(e)=>{
+                        let typeValue = e.target.value; 
+                        dispatch({ type:'set_value' , payload:typeValue }) // dispatch me value pass kiye with the help of "payload"
+                        }}   
+                />
 
        -----------------            
 
