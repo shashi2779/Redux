@@ -144,18 +144,18 @@
                 
                const [state,dispatch] = useReducer(reducer,10)
 
-            return (
-                <>
-                <h1>balls</h1>
-                <h1>no of balls:{state}</h1>
-                <button onClick={()=>{
-                    dispatch({type:'increment'})
-                }}>+</button>
-                <button onClick={()=>{
-                    dispatch({type:'decrement'})
-                }}>-</button>
-              </>
-            )
+                return (
+                    <>
+                    <h1>balls</h1>
+                    <h1>no of balls:{state}</h1>
+                    <button onClick={()=>{
+                        dispatch({type:'increment'})
+                    }}>+</button>
+                    <button onClick={()=>{
+                        dispatch({type:'decrement'})
+                    }}>-</button>
+                  </>
+                )
             }
 
             export default Ball
