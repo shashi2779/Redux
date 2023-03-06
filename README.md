@@ -122,7 +122,7 @@
         
 
 
-- eg => 
+- eg-1 : 
 ```js
             import React,{useReducer} from 'react'
 
@@ -160,6 +160,7 @@
 
             export default Ball
 ```
+- eg-2 :
 ```js
         const initialState = {count: 0};
 
