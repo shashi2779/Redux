@@ -624,10 +624,10 @@
   - export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
   - to give access to the component to two things:
       
-      - first -> "store"  -> mapsstatetoprops
-      - second  -> "dispatch" -> mapdispatchtoprops
+      - first -> "store"  -> mapStateToProps
+      - second  -> "dispatch" -> mapDispatchtoProps
          - -----------------------------------------------------
-     - first -> "store"  -> mapsstatetoprops
+     - first -> "store"  -> mapStateToProps
      
      
             function Ball(props) {
@@ -657,7 +657,7 @@
 
             
       
-     - second  -> "dispatch" -> mapdispatchtoprops
+     - second  -> "dispatch" -> mapDispatchtoProps
 
             // dispatcher solve - fun pass[setbal,buyball] as a props 
           
