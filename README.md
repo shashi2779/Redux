@@ -64,7 +64,7 @@
     - reducer() function as a parameter "state" & "action" leta hai.
          
          - reducer , state change karta hai.
-         - dispatch ek fun hai , jo action bhejta hai "reducer" ke pas taki wo "state" ko change kare
+         - dispatch ek fun hai , jo "action" bhejta hai "reducer" ke pas taki wo "state" ko change kare
       
            
            
