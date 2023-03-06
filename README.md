@@ -188,9 +188,9 @@
         }
 
 ```
-
-## In sellBuyBatUseState :
+## sell and buy bat :
 ![](img/pic4.png)
+## In sellBuyBatUseState :
 
 ```js
        
