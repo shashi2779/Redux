@@ -1056,7 +1056,7 @@ export default connect(mapStateToProps,mapDispatchtoProps)(Bat);
  
 ![](img/pic2.png)
 
-![](img/pic3.jpg)
+![](img/pic3.png)
 
 
 ```js
