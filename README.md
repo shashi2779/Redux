@@ -60,7 +60,7 @@
 
      - initialState => balls:10
     
-    - useReducer , "initial state" ke sath sath "reducer function" bhi leta hai.
+    - useReducer , " initial state " ke sath sath " reducer " function bhi leta hai.
     - reducer() function as a parameter "state", "action" leta hai.
          
          - reducer , state change karta hai.
