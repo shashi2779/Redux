@@ -17,6 +17,7 @@
 
 ## compair between "useState" & "useReducer" Hooks
 
+![](img/pic5.png)
 ### useState :
 
       const [state,setState] = useState("initialState")
@@ -189,6 +190,7 @@
 ```
 
 ## In sellBuyBatUseState :
+![](img/pic4.png)
 
 ```js
        
