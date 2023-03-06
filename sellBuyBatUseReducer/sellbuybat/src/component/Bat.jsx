@@ -1,6 +1,6 @@
 import React,{useReducer} from 'react'
  
-let initialState = {
+let initialState = {  // initialState as a "obj" hota hai
     bat:10,
     value:''  //[ tosell ko as a "value" liye h ]💨 ya jo "value" Input me type kar rhe -> default value Input ki 💨 " "  hai. 
 }             // compair with sellBuyBatUseState
