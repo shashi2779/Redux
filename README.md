@@ -61,7 +61,7 @@
      - initialState => balls:10
     
     - useReducer , " initial state " ke sath sath " reducer " function bhi leta hai.
-    - reducer() function as a parameter "state", "action" leta hai.
+    - reducer() function as a parameter "state" & "action" leta hai.
          
          - reducer , state change karta hai.
          - dispatch ek fun hai , jo action bhejta hai "reducer" ke pas taki wo "state" ko change kare
