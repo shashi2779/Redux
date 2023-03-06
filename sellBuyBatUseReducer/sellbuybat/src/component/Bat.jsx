@@ -5,8 +5,8 @@ let initialState = {
     value:''  //[ tosell ko as a "value" liye h ]💨 ya jo "value" Input me type kar rhe -> default value Input ki 💨 " "  hai. 
 }             // compair with sellBuyBatUseState
 
-function reducer(state,action){   // dispatch related to action , dispatch passes obj , in obj -> action form
-    switch(action.type){
+function reducer(state,action){    // dispatch se as a obj "action" pass karte hai
+    switch(action.type){          //  action (1) type (2) payload => se dispatch me "value" pass karte hai
         case 'sell_bat':
             if(state.bat - state.value <0){  // handle krr rha ki buy karne prr -ve me na jaye 
                 return {
