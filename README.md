@@ -154,7 +154,7 @@
                 <button onClick={()=>{
                     dispatch({type:'decrement'})
                 }}>-</button>
-            </>
+              </>
             )
             }
 
