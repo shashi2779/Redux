@@ -602,7 +602,7 @@
 
 
     // to give access to the component to two things
-    //  first store  -> mapsstatetoprops
+    //  first -> store  -> mapsstatetoprops
     // second  -> dispatch -> mapdispatchtoprops
 
     export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
