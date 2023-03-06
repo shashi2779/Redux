@@ -5,6 +5,7 @@ let initialState = {  // initialState as a "obj" hota hai
     value:''  //[ tosell ko as a "value" liye h ]💨 ya jo "value" Input me type kar rhe -> default value Input ki 💨 " "  hai. 
 }             // compair with sellBuyBatUseState
 
+
 function reducer(state,action){    // dispatch se as a obj "action" pass karte hai "reducer" ko
     switch(action.type){          //  action (1) type (2) payload => se dispatch me "value" pass karte hai
         case 'sell_bat':
@@ -36,6 +37,7 @@ function reducer(state,action){    // dispatch se as a obj "action" pass karte h
          break;                          
     }
 }
+
 
 
 function Bat() {
