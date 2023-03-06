@@ -208,7 +208,7 @@
 
             let buyBat = () =>{
                     setbat(bat+Number(toSell))
-                    setToChangeBat('')          // input se value hta rhe jo seen hoti h , buy hone k bad bhi 
+                    setToChangeBat('')       // input se value hta rhe jo seen hoti h , buy hone k bad bhi 
             }
 
             return (
