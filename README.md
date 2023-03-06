@@ -262,7 +262,7 @@
         let initialState = {
             bat:10,
             value:''  //[ tosell ko as a "value" liye h ]💨 ya jo "value" Input me type kar rhe, default value input ki 💨 " "  hai. 
-        }   // compair with sellBuyBatUseState
+        }             // compair with sellBuyBatUseState
 
         function reducer(state,action){   // dispatch related to action , dispatch passes obj , in obj -> action form
             switch(action.type){
