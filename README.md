@@ -663,6 +663,143 @@
                 }
             }
 
+
+##  reduxwithbat :
+- batReducer.js
+```js
+let initialState = {
+    bat: 10,
+    value: ""    //[ tosell ko as a "value" liye h ]💨 ya jo "value" Input me type kar rhe , wahi ye value hai -> default value Input ki 💨 " "  hai.
+}               // compair with sellBuyBatUseState
+
+function batReducer(state = initialState, action) {
+    switch (action.type) {
+        case "sell_bat":
+            if (state.bat - state.value < 0) {   // handle krr rha ki buy karne prr -ve me na jaye 
+                return {
+                    ...state,                      // state me initialState pass hua h  
+                    value: ""
+                }
+            } else {
+                return {
+                    bat: state.bat - state.value,
+                    value: ""                       // "input" me jo value type kiye h as a "tosell" usseee -> , input se hataye h    
+                }
+            }
+        case "buy_bat":
+            return {
+                bat: state.bat + Number(state.value),
+                value: ""   
+            }
+        case "set_value":
+            return {
+                bat: state.bat,
+                value: action.payload   // dispatch se payload m value pass kiye h.... "action.payload" me value aayi
+            }
+        default:
+            return state
+    }
+}
+export default batReducer;
+
+``` 
+- store
+```js
+// npm i redux react-redux
+
+import { createStore } from "redux";
+import batReducer from "./redux/batReducer";
+const store = createStore(batReducer);
+
+export default store;
+
+```   
+- App.js
+```js
+import './App.css';
+import Bat from './component/Bat';
+import { Provider } from 'react-redux';  
+import store from './store';
+
+function App() {
+  return (
+   
+   <>
+   <Provider store={store}>
+       <Bat/>
+   </Provider>
+   
+   </>
+  );
+}
+
+export default App;
+
+``` 
+- Bat.jsx
+```js
+import React from 'react'
+import { connect } from "react-redux";
+
+
+function Bat(props) {
+    console.log();
+    return (
+        <>
+            <h1>Bat</h1>
+            <h2>No of Bat:{props.bat}</h2>
+            <input type="number" value={props.value}
+                onChange={(e) => {
+                    let value = e.target.value;
+                    props.setValue(value);
+                }} />
+            <button
+                onClick={props.sellBat}
+            >Sell</button>
+            <button
+                onClick={props.buyBat}
+            >Buy</button>
+        </>
+    )
+}
+
+
+const mapStateToProps = (store) => { // ye as a "props" pass hoga Ball components me
+    return store;
+}
+
+
+const mapDispatchtoProps = (dispatch) => { // ye bhi as a "props" pass hoga Ball components me 
+    return {
+        sellBat: () => {
+            
+            dispatch({ type: "sell_bat" })
+
+        },
+        buyBat: () => {
+           
+            dispatch({ type: "buy_bat" })
+
+        },
+        setValue: (value) => {    //dispatch("action" as obj), action =>(1)type , (2)payload 
+            dispatch({
+                type: "set_value",
+                payload: value
+            })
+        }
+    }
+
+}
+
+
+export default connect(mapStateToProps,mapDispatchtoProps)(Bat);
+
+// const connectdWIthpropsFns = connect(mapStateToProps, mapDispatchtoProps);
+// const connectedWithBat = connectdWIthpropsFns(Bat);
+// export default connectedWithBat;
+
+```      
+
 ---------------
 ## multiple type of data handle with redux :
 ----------------------
