@@ -91,10 +91,10 @@
    
       -  dispatch ek fun hai , jo "action" bhejta hai "reducer" ke pas taki wo "state" ko change kare
         
-       -  
+   
    
                    return (
-                        <>
+                      <>
                         <h1>balls</h1>
                         <h1>no of balls:{state}</h1>
                         <button onClick={()=>{
@@ -103,11 +103,11 @@
                         <button onClick={()=>{
                             dispatch({type:'decrement'})
                         }}>-</button>
-                       </>
+                      </>
                   )
                
    ----------            
-               
+   -            
                
                 <input type={'number'}  value={state.value} 
                     onChange={(e)=>{
