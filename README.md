@@ -340,8 +340,8 @@
 --------- 
 
 #### npm i redux react-redux
-- Reducer
 - initialState
+- Reducer
 - dispatch
 - action
 - type
