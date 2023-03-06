@@ -19,7 +19,8 @@ function Ball(props) {
 }
 
 
-// store as a props Ball component me pass hoga
+
+ // store as a props Ball component me pass hoga
 // to get your state variable from redux store , (dispatch function bhi provide karta h) 
 const mapStateToProps = (store) => {   // return state-variable as props
     return store;  // this fun return state...variable as a props in our Ball fun.

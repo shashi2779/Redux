@@ -565,8 +565,8 @@
             <h1>Balls</h1>
             <h2>No of Balls:{props.balls}</h2>
             <button
-                onClick={props.buyBall} 
-            >+</button>
+                onClick={props.buyBall}     // mana buyBall call hua toh => [ components se dispatch jayega aur dispatch se reducer jayega]
+            >+</button>                    //[agar yha buyBall call hua toh] components => dispatch => reducer => store => components
             <button
                 onClick={props.sellBall}
 
