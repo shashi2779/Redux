@@ -91,8 +91,8 @@
    
       -  dispatch ek fun hai , jo "action" bhejta hai "reducer" ke pas taki wo "state" ko change kare
         
-         
-         
+       -  
+   
                 <input type={'number'}  value={state.value} 
                     onChange={(e)=>{
                         let typeValue = e.target.value; 
