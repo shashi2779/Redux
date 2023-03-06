@@ -15,7 +15,7 @@ function reducer(state,action){
 
 
 function Ball() {
-    
+   //const [state, dispatch] = useReducer(reducer, initialState);
    const [state,dispatch] = useReducer(reducer,10)
 
   return (
@@ -33,3 +33,6 @@ function Ball() {
 }
 
 export default Ball
+
+
+

@@ -62,17 +62,21 @@
     
     - useReducer , "initial state" ke sath sath "reducer function" bhi leta hai.
     - reducer() function as a parameter "state", "action" leta hai.
+         
+         - reducer , state change karta hai.
       
-            function reducer(state,action){
-                switch(action.type){
-                    case 'increment':
-                        return state+1;
+           
+           
+               function reducer(state,action){
+                 switch(action.type){
+                     case 'increment':
+                         return state+1;
 
-                    case 'decrement':
-                        return state-1; 
+                     case 'decrement':
+                         return state-1; 
                     
-                    default:
-                        console.log("wrong type") ;   
+                     default:
+                         console.log("wrong type") ;   
                 }
             }
 
