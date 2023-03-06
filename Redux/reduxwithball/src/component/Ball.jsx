@@ -1,4 +1,5 @@
 import React from 'react'
+// import connect fun
 import { connect } from "react-redux";
 
 function Ball(props) {
@@ -18,6 +19,7 @@ function Ball(props) {
 }
 
 
+// store as a props Ball component me pass hoga
 // to get your state variable from redux store , (dispatch function bhi provide karta h) 
 const mapStateToProps = (store) => {   // return state-variable as props
     return store;  // this fun return state...variable as a props in our Ball fun.
@@ -26,8 +28,8 @@ const mapStateToProps = (store) => {   // return state-variable as props
 
 
 
-// dispatcher solve - fun pass[setbal,buyball] as a props 
-const mapDispatchtoProps = (dispatch) => {      // return function as props
+// Ball component me dispatch as a props pass hoga 
+const mapDispatchtoProps = (dispatch) => {     
     return {                                   
         sellBall: () => {           //HINT ::=> sellBall:dispatch({})   -> [click karne prr call ho] ->  sellBall:()=>{dispatch({})} 
             dispatch({                     
@@ -44,7 +46,7 @@ const mapDispatchtoProps = (dispatch) => {      // return function as props
 
 
 // to give access to the component to two things
-//  first store  -> mapsstatetoprops
+//  first -> store  -> mapsstatetoprops
 // second  -> dispatch -> mapdispatchtoprops
 
 export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
