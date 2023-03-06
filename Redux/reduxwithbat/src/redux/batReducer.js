@@ -1,7 +1,7 @@
 let initialState = {
     bat: 10,
-    value: ""   // tosell ko as a "value" liye h...  [compair with In sellBuyBatUseState]
-}
+    value: ""    //[ tosell ko as a "value" liye h ]💨 ya jo "value" Input me type kar rhe , wahi ye value hai -> default value Input ki 💨 " "  hai.
+}               // compair with sellBuyBatUseState
 
 function batReducer(state = initialState, action) {
     switch (action.type) {
