@@ -107,7 +107,7 @@
                   )
                
    ----------            
-   -            
+   - get Input :        
                
                 <input type={'number'}  value={state.value} 
                     onChange={(e)=>{
