@@ -404,7 +404,7 @@
 - connect :
     
   - to connect your "store" with a "components".
-  - agar ye ball components ko store se bat karani hai, toh hamare pas ek function hota hai "connect"
+  - agar ye "Ball" components ko "store" se bat karani hai, toh hamare pas ek function hota hai "connect"
   - export default connect(mapStateToProps)(Ball);
  
   -  "store"  -> mapsstatetoprops ,     "components" -> Ball
