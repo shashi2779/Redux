@@ -629,24 +629,11 @@
          - -----------------------------------------------------
      - first -> "store"  -> mapStateToProps
      
-     
-            function Ball(props) {
-                console.log(props)
-                return (<>
-                    <h1>Balls</h1>
-                    <h2>No of Balls:{props.balls}</h2>
-                    <button>+</button>
-                    <button>-</button>
-                </>
-                )
-            }
-
-            
             
             // to get your state-variable from redux store , (store dispatch function bhi provide karta h) 
            
             const mapStateToProps = (store) => {   
-                return store;  // this fun return state-variable as a props in our Ball components.
+                     return store;  // this fun return state-variable as a props in our Ball components.
                         
             }
 
