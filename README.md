@@ -348,12 +348,12 @@
 - payload
 
 
+#### initialState :
+- your state , when your app initially renders.
+
 #### Reducer :
 - It contains all the state manipulation logic.
   [state change karta hai]
-
-#### initialState :
-- your state , when your app initially renders.
 
 #### dispatch :
 - It is a function that is used to pass "action" object to reducer.
