@@ -164,6 +164,8 @@
             export default Ball
 ```
 - eg-2 :
+![](img/useReducer.png)
+
 ```js
         const initialState = {count: 0};
 
