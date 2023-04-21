@@ -236,6 +236,7 @@
 
 
 ## In sellBuyBatUseReducer :
+![](img/useReducer.png)
 
 ```js   
        //reducer function Hints :
