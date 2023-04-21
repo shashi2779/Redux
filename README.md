@@ -22,6 +22,7 @@
 
       const [state,setState] = useState("initialState")
 -----------------------
+![](img/useState.png)
 
       import React,{useState} from 'react'
 
@@ -56,6 +57,7 @@
    
      const [state, dispatch] = useReducer(reducer, initialState);
 
+![](img/useReducer.png)
 
 - (reducer, initialState) :
 
