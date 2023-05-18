@@ -59,6 +59,8 @@
 
 ![](img/useReducer.png)
 
+- "useReducer" ka use tab kare jab , 3 or more than 3 state use krr rhe apne project me 
+
 - (reducer, initialState) :
 
      - initialState => balls:10
@@ -85,7 +87,7 @@
             }
 
     
-- "useReducer" ka use tab kare jab , 3 or more than 3 state use krr rhe apne project me 
+
 - [state, dispatch] :
    
    - increment , decrement => enn dono k liye useReducer ek common function dega "dispatch()" nam se.
