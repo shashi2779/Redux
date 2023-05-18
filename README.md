@@ -65,7 +65,8 @@
    - state write in "spread operator" form
    - address change karta hai
    - state ka "copy" bna deta hai
-   - matlab state ka copy bna diya toh new jo state bna usme koi bhi change kare purane state m koi change nhi hoga bcz address change krr diya state ka spread operator
+   - matlab state ka copy bna diya toh new jo state bna usme koi bhi change kare purane state m koi change nhi hoga bcz address change krr diya state ka spread operator se
+  
 - (reducer, initialState) :
 
      - initialState => balls:10
