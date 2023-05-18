@@ -61,7 +61,7 @@
 
 - "useReducer" ka use tab kare jab more than 3 "state" use krr rhe apne project me 
 
-- {. . .state} 
+- {...state} 
    - state write in "spread operator" form
    - address change karta hai
    - state ka "copy" bna deta hai
