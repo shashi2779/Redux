@@ -59,7 +59,7 @@
 
 ![](img/useReducer.png)
 
-- "useReducer" ka use tab kare jab , 3 or more than 3 state use krr rhe apne project me 
+- "useReducer" ka use tab kare jab , 3 or more than 3 "state" use krr rhe apne project me 
 
 - (reducer, initialState) :
 
