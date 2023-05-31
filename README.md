@@ -739,6 +739,7 @@
  
  export default connect(Ball);
 
+
 ```
 ##  reduxwithbat :
 - batReducer.js
