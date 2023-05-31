@@ -676,7 +676,70 @@
                 }
             }
 
+## Redux with Hooks :
+- ye do Hooks redux ko aasan kar dete hai 
+   - useSelector() 
+      - mapStateToProps ka replacement hai
+      - esko bhi state milti hai , jaise mapStateToProps ko milti thi.
+   - useDispatch()
+     - mapDispatchToProps ka replacement hai.
+     - ye sidha sidha dispatch la kar de deta hai.
+- ball
+```js
+    import React from 'react'
+    import { connect, useSelector, useDispatch } from "react-redux";
 
+    function Ball(props) {    // sayad props nhi bheja hai 
+        // console.log(props)
+
+        // const balls = useSelector( state => state.ball.balls)
+        const balls = useSelector( state => state.balls)
+        const dispatch = useDispatch()
+        return (<>
+            <h1>Balls</h1>
+            <h2>No of Balls:{balls}</h2>
+            <button
+                onClick={()=>dispatch({type:type: "increment"})}     
+            >+</button>
+            <button
+                onClick={()=>dispatch({type:type: "decrement"})}
+
+            >-</button>
+        </>
+        )
+    }
+
+
+    // eska alternate --> useSelector() 
+    // const mapStateToProps = (store) => {   
+    //     return store;  // this fun return state-variable as a props in our Ball fun.
+                
+    // }
+
+
+
+    // eska alternate --> useDispatch()
+    // const mapDispatchtoProps = (dispatch) => {      
+    //     return {                         //HINT ::=> sellBall:dispatch(action as obj)          
+    //         sellBall: () => {           //HINT ::=> sellBall:dispatch({})   -> [click karne prr call ho] ->  sellBall:()=>{dispatch({})} 
+    //             dispatch({                     
+    //                 type: "decrement"
+    //             })
+    //         },
+    //         buyBall: () => {
+    //             dispatch({
+    //                 type: "increment"
+    //             })
+    //         }
+    //     }
+    // }
+
+
+    // export default connect(mapStateToProps, mapDispatchtoProps)(Ball);
+ 
+ export default connect(Ball);
+
+```
 ##  reduxwithbat :
 - batReducer.js
 ```js
